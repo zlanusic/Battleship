@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="9ed20151-88f6-48a9-9f71-b8f7d5694d1c" name="zlanusic@ZLANUSIC_DELL 2012-04-04 20:31:04" runUser="zlanusic_dell\zlanusic" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="0a3a4717-4c47-4bd4-9b00-4d75c5fb2ba5">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestResults\zlanusic_ZLANUSIC_DELL 2012-04-04 20_31_04">
+      <DeploymentItem filename="C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\BattleShipModul\bin\Debug\BattleShipModul.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2012-04-04T20:31:04.5340755+02:00" queuing="2012-04-04T20:31:04.6720834+02:00" start="2012-04-04T20:31:04.7080854+02:00" finish="2012-04-04T20:31:05.1401101+02:00" />
+  <TestDefinitions>
+    <UnitTest name="GetFreeStartingSquaresTest" storage="c:\users\zlanusic\documents\visual studio 2008\projects\project1\main_repo\battleship\testproject\bin\debug\testproject.dll" id="26f64403-8e1c-4e69-1cdc-6adaa65db356">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="472aa843-59af-4474-94dc-7c6b1601ea74" />
+      <TestMethod codeBase="C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\bin\Debug\TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.GridTest, TestProject" name="GetFreeStartingSquaresTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="26f64403-8e1c-4e69-1cdc-6adaa65db356" executionId="472aa843-59af-4474-94dc-7c6b1601ea74" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="472aa843-59af-4474-94dc-7c6b1601ea74" testId="26f64403-8e1c-4e69-1cdc-6adaa65db356" testName="GetFreeStartingSquaresTest" computerName="ZLANUSIC_DELL" duration="00:00:00.0296160" startTime="2012-04-04T20:31:04.7890901+02:00" endTime="2012-04-04T20:31:05.1291095+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNull failed. </Message>
+          <StackTrace>   at TestProject.GridTest.GetFreeStartingSquaresTest() in C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\GridTest.cs:line 88
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

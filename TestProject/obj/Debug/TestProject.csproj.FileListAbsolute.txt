@@ -1,0 +1,7 @@
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\bin\Debug\TestProject.dll
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\bin\Debug\TestProject.pdb
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\obj\Debug\TestProject.dll
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\obj\Debug\TestProject.pdb
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\bin\Debug\BattleShipModul.dll
+C:\Users\zlanusic\Documents\Visual Studio 2008\Projects\Project1\Main_repo\BattleShip\TestProject\bin\Debug\BattleShipModul.pdb
