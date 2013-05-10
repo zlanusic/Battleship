@@ -5,11 +5,11 @@ namespace TestProject
     
     
     /// <summary>
-    ///This is a test class for FleetTest and is intended
-    ///to contain all FleetTest Unit Tests
+    ///This is a test class for AfterFirstHitFiringTest and is intended
+    ///to contain all AfterFirstHitFiringTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class FleetTest
+    public class AfterFirstHitFiringTest
     {
 
 
@@ -63,44 +63,31 @@ namespace TestProject
 
 
         /// <summary>
-        ///A test for GetShips
+        ///A test for NextTarget
         ///</summary>
         [TestMethod()]
-        public void MakeShipsTest()
+        public void NextTargetTest()
         {
-            ShipBuilder sb = new ShipBuilder();
-            Fleet fleet = sb.MakeFleet();
-            Assert.AreEqual(Fleet.ShipLengths.Length, fleet.NumberOfShips);
+            EnemyGrid grid = new EnemyGrid();
+            Square firstSquareHit = grid.GetSquare(9, 0);
+            //firstSquareHit.Occupy();
+            int targetShipLength = 5;
+            AfterFirstHitFiring tactics = new AfterFirstHitFiring(grid, firstSquareHit, targetShipLength);
+            Square nextTarget = tactics.NextTarget();
+            Assert.IsTrue(nextTarget == grid.GetSquare(9, 1) || nextTarget == grid.GetSquare(8, 0));
 
-            for (int i = 0; i < fleet.NumberOfShips; ++i)
-            {
-                Ship ship = fleet.GetShips()[i];
-                int left = ship.Squares[0].Column - 1;
-                if (left < 0)
-                    left = 0;
-                int top = ship.Squares[0].Row - 1;
-                if (top < 0)
-                    top = 0;
+            Assert.IsFalse(nextTarget == grid.GetSquare(9, 0));
+            Assert.IsFalse(nextTarget == grid.GetSquare(8, 1));
 
-                int right = ship.Squares[ship.Squares.Length - 1].Column + 1;
-                if (right >= Grid.NumberOfColumns)
-                    right = Grid.NumberOfColumns - 1;
-                int bottom = ship.Squares[ship.Squares.Length - 1].Row + 1;
-                if (bottom >= Grid.NumberOfRows)
-                    bottom = Grid.NumberOfRows - 1;
 
-                for (int j = i + 1; j < fleet.NumberOfShips; ++j)
-                {
-                    Ship shipToCompare = fleet.GetShips()[j];
-                    foreach (Square square in shipToCompare.Squares)
-                        Assert.IsFalse(IsSquareInside(square, top, left, bottom, right));
-                }
-            }
-        }
+            firstSquareHit = grid.GetSquare(3, 3);
+            //firstSquareHit.Occupy();
+            tactics = new AfterFirstHitFiring(grid, firstSquareHit, targetShipLength);
+            nextTarget = tactics.NextTarget();
+            Assert.IsTrue(nextTarget == grid.GetSquare(3, 2) || nextTarget == grid.GetSquare(2, 3) 
+                          || nextTarget == grid.GetSquare(3, 4) || nextTarget == grid.GetSquare(4, 3));
 
-        bool IsSquareInside(Square square, int top, int left, int bottom, int right)
-        {
-            return square.Row >= top && square.Row < bottom && square.Column >= left && square.Column < right;
+            Assert.IsFalse(nextTarget == grid.GetSquare(3, 3));
         }
     }
 }
